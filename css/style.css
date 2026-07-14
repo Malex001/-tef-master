@@ -302,6 +302,334 @@ body {
   transition: width 0.3s ease;
 }
 
+#conj-quiz-area {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.conj-tense-label {
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem;
+}
+
+.conj-prompt {
+  font-size: 1.3rem;
+  margin: 0 0 1.25rem;
+}
+
+.conj-pronoun {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.conj-verb {
+  font-weight: 700;
+}
+
+.conj-en {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.conj-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.conj-input:disabled {
+  opacity: 0.7;
+}
+
+.conj-feedback {
+  min-height: 1.3rem;
+  margin: 0.75rem 0 0;
+  font-weight: 600;
+}
+
+.conj-feedback.correct {
+  color: var(--success);
+}
+
+.conj-feedback.incorrect {
+  color: var(--danger);
+}
+
+.conj-actions {
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#conj-stats-summary,
+#conj-stats-themes {
+  margin-top: 1.5rem;
+}
+
+.reading-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.reading-list[hidden] {
+  display: none;
+}
+
+.reading-card {
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+}
+
+.reading-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.reading-type-badge {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.reading-difficulty {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.reading-card-title {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.reading-card-progress {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.reading-back-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.9rem;
+  padding: 0;
+  margin: 1rem 0 0.5rem;
+  cursor: pointer;
+}
+
+.reading-passage-text {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  white-space: pre-line;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.reading-question-count {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 0.4rem;
+}
+
+.reading-question-text {
+  font-weight: 600;
+  margin: 0 0 0.9rem;
+}
+
+.reading-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.reading-option {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.reading-option.disabled {
+  cursor: default;
+}
+
+.reading-option.correct {
+  border-color: var(--success);
+  background: color-mix(in srgb, var(--success) 15%, var(--surface));
+}
+
+.reading-option.incorrect {
+  border-color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 15%, var(--surface));
+}
+
+.reading-result {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.writing-target {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: -0.75rem 0 1rem;
+}
+
+.writing-connectors-label,
+.writing-checklist-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.writing-connectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.connector-chip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.writing-textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.word-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.4rem 0 1.5rem;
+}
+
+.word-count-ok {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.word-count-off {
+  color: var(--danger);
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.checklist-item input {
+  margin-top: 0.2rem;
+}
+
+.listening-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.listening-unsupported {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.speaking-timer-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.speaking-phase-label {
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-height: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.speaking-timer {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin: 0 0 1rem;
+  min-height: 2.8rem;
+}
+
+.speaking-playback {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
 .tabbar {
   display: flex;
   border-top: 1px solid var(--border);
@@ -311,12 +639,29 @@ body {
 
 .tab-btn {
   flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
   border: none;
   background: none;
   color: var(--text-muted);
-  padding: 0.85rem 0;
-  font-size: 0.85rem;
+  padding: 0.6rem 0.1rem;
+  font-size: 0.65rem;
+  line-height: 1.1;
   cursor: pointer;
+}
+
+.tab-icon {
+  font-size: 1.15rem;
+}
+
+.tab-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .tab-btn.active {

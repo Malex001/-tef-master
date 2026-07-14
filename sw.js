@@ -1,11 +1,21 @@
-const CACHE_NAME = "tef-master-v1";
+const CACHE_NAME = "tef-master-v6";
 const PRECACHE_URLS = [
   "./",
   "./index.html",
   "./css/style.css",
   "./js/app.js",
   "./js/storage.js",
+  "./js/conjugation.js",
+  "./js/reading.js",
+  "./js/writing.js",
+  "./js/listening.js",
+  "./js/speaking.js",
   "./data/vocab.json",
+  "./data/conjugations.json",
+  "./data/reading.json",
+  "./data/writing.json",
+  "./data/listening.json",
+  "./data/speaking.json",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

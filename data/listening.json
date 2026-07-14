@@ -1,0 +1,82 @@
+{
+  "types": [
+    { "id": "message", "fr": "Message vocal" },
+    { "id": "annonce", "fr": "Annonce publique" },
+    { "id": "conversation", "fr": "Conversation" },
+    { "id": "meteo", "fr": "Bulletin météo" }
+  ],
+  "items": [
+    {
+      "id": "l1",
+      "type": "message",
+      "difficulty": "A2",
+      "title": "Rappel de rendez-vous",
+      "transcript": "Bonjour, ceci est un message de la clinique dentaire Sourire Plus. Nous vous rappelons votre rendez-vous prévu demain, mercredi, à quatorze heures trente, avec le docteur Tremblay. Si vous devez annuler ou déplacer ce rendez-vous, merci de nous contacter avant midi au 514-555-0199. Nous vous remercions et à demain.",
+      "questions": [
+        {"q": "Quel est le but de cet appel ?", "options": ["Confirmer un paiement", "Rappeler un rendez-vous", "Annoncer une fermeture", "Proposer une promotion"], "correct": 1},
+        {"q": "À quelle heure est le rendez-vous ?", "options": ["13h30", "14h30", "15h00", "16h30"], "correct": 1},
+        {"q": "Que faut-il faire pour annuler le rendez-vous ?", "options": ["Se présenter à la clinique", "Envoyer un courriel", "Téléphoner avant midi", "Rien, l'annulation est automatique"], "correct": 2}
+      ]
+    },
+    {
+      "id": "l2",
+      "type": "annonce",
+      "difficulty": "B1",
+      "title": "Embarquement à l'aéroport",
+      "transcript": "Mesdames et messieurs, votre attention s'il vous plaît. Le vol Air Nova 245 à destination de Montréal est maintenant prêt pour l'embarquement à la porte 12. Nous invitons les passagers avec de jeunes enfants et les personnes à mobilité réduite à embarquer en priorité. L'embarquement général commencera dans quelques minutes. Merci de vous munir de votre carte d'embarquement et d'une pièce d'identité.",
+      "questions": [
+        {"q": "Quelle est la destination du vol ?", "options": ["Toronto", "Montréal", "Québec", "Ottawa"], "correct": 1},
+        {"q": "À quelle porte l'embarquement a-t-il lieu ?", "options": ["Porte 2", "Porte 12", "Porte 20", "Porte 21"], "correct": 1},
+        {"q": "Qui embarque en premier ?", "options": ["Les passagers en classe affaires", "Les personnes à mobilité réduite et les familles avec jeunes enfants", "Tout le monde en même temps", "Le personnel de bord seulement"], "correct": 1}
+      ]
+    },
+    {
+      "id": "l3",
+      "type": "conversation",
+      "difficulty": "B1",
+      "title": "Organiser une réunion",
+      "transcript": "Dis, tu es libre pour la réunion de vendredi ? Vendredi matin, non, j'ai un rendez-vous chez le médecin. Mais l'après-midi, ça devrait aller. D'accord, je vais essayer de la déplacer à 14h alors. Parfait, merci ! Est-ce que je dois préparer quelque chose ? Oui, peux-tu apporter le rapport des ventes du mois dernier ? Pas de problème, je l'aurai prêt.",
+      "questions": [
+        {"q": "Pourquoi la personne n'est-elle pas disponible vendredi matin ?", "options": ["Elle est en vacances", "Elle a un rendez-vous chez le médecin", "Elle travaille à domicile", "Elle a une autre réunion"], "correct": 1},
+        {"q": "À quelle heure la réunion est-elle finalement proposée ?", "options": ["10h", "12h", "14h", "16h"], "correct": 2},
+        {"q": "Que doit apporter la personne à la réunion ?", "options": ["Un ordinateur portable", "Le rapport des ventes du mois dernier", "Des documents signés", "Rien de spécial"], "correct": 1}
+      ]
+    },
+    {
+      "id": "l4",
+      "type": "meteo",
+      "difficulty": "A2",
+      "title": "Prévisions météo",
+      "transcript": "Voici les prévisions météo pour demain. Le matin, le ciel sera nuageux avec des températures autour de dix degrés. Dans l'après-midi, une pluie légère est attendue, accompagnée de vents modérés. La température maximale prévue est de treize degrés. En soirée, les nuages devraient se dissiper progressivement. N'oubliez pas votre parapluie si vous sortez cet après-midi.",
+      "questions": [
+        {"q": "Quel temps est prévu le matin ?", "options": ["Ensoleillé", "Nuageux", "Neigeux", "Orageux"], "correct": 1},
+        {"q": "Quelle est la température maximale prévue ?", "options": ["10 degrés", "13 degrés", "16 degrés", "20 degrés"], "correct": 1},
+        {"q": "Que recommande-t-on d'apporter ?", "options": ["Des lunettes de soleil", "Un parapluie", "Un manteau d'hiver", "De la crème solaire"], "correct": 1}
+      ]
+    },
+    {
+      "id": "l5",
+      "type": "annonce",
+      "difficulty": "B1",
+      "title": "Interruption de service de métro",
+      "transcript": "Attention, en raison de travaux sur la ligne, le service de métro entre les stations Berri et Longueuil sera interrompu à partir de vingt-deux heures ce soir. Un service de navette par autobus sera mis en place durant cette période. Nous nous excusons pour les désagréments causés et vous remercions de votre compréhension.",
+      "questions": [
+        {"q": "Pourquoi le service de métro est-il interrompu ?", "options": ["Une grève", "Des travaux", "Une panne électrique", "Une manifestation"], "correct": 1},
+        {"q": "À partir de quelle heure le service est-il interrompu ?", "options": ["20h", "21h", "22h", "23h"], "correct": 2},
+        {"q": "Quelle solution est proposée aux usagers ?", "options": ["Un service de navette par autobus", "Un remboursement du billet", "Un service de taxi gratuit", "Aucune solution proposée"], "correct": 0}
+      ]
+    },
+    {
+      "id": "l6",
+      "type": "message",
+      "difficulty": "B1",
+      "title": "Confirmation d'entretien d'embauche",
+      "transcript": "Bonjour Madame Diallo, ici Nathalie des Ressources humaines chez Groupe Horizon. Je vous appelle pour confirmer votre entretien d'embauche prévu jeudi prochain à dix heures dans nos bureaux du centre-ville. Merci d'apporter une pièce d'identité et une copie de votre CV. Si vous avez la moindre question, n'hésitez pas à me rappeler. Au plaisir de vous rencontrer.",
+      "questions": [
+        {"q": "Quel est le but de cet appel ?", "options": ["Annuler un entretien", "Confirmer un entretien d'embauche", "Proposer un poste", "Demander des références"], "correct": 1},
+        {"q": "Quel jour est prévu l'entretien ?", "options": ["Mercredi", "Jeudi", "Vendredi", "Lundi"], "correct": 1},
+        {"q": "Que doit apporter Madame Diallo ?", "options": ["Seulement son CV", "Une pièce d'identité et une copie de son CV", "Un contrat signé", "Rien de spécial"], "correct": 1}
+      ]
+    }
+  ]
+}

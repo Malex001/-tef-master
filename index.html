@@ -51,6 +51,130 @@
   </p>
 </main>
 
+<main id="view-conjugation" class="view">
+  <div class="controls">
+    <select id="tense-filter" aria-label="Filtrer par temps">
+      <option value="">Tous les temps</option>
+    </select>
+    <div class="session-progress"><span id="conj-count">0/0</span></div>
+  </div>
+
+  <div id="conj-quiz-area">
+    <p class="conj-tense-label" id="conj-tense-label"></p>
+    <p class="conj-prompt" id="conj-prompt"></p>
+    <input type="text" id="conj-input" class="conj-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Écris la forme conjuguée" />
+    <p class="conj-feedback" id="conj-feedback"></p>
+    <div class="conj-actions">
+      <button id="conj-check" class="btn btn-primary">Vérifier</button>
+      <button id="conj-next" class="btn btn-primary" hidden>Suivant</button>
+    </div>
+  </div>
+
+  <p id="conj-empty-state" class="empty-state" hidden>
+    Aucune forme à réviser pour l'instant. Reviens plus tard ou choisis un autre temps.
+  </p>
+
+  <div id="conj-stats-summary" class="stats-summary"></div>
+  <div id="conj-stats-themes" class="stats-themes"></div>
+</main>
+
+<main id="view-reading" class="view">
+  <div id="reading-passage-list" class="reading-list"></div>
+
+  <div id="reading-passage-view" class="reading-passage-view" hidden>
+    <button id="reading-back-btn" class="reading-back-btn">← Retour aux textes</button>
+    <h2 id="reading-passage-title"></h2>
+    <p id="reading-passage-text" class="reading-passage-text"></p>
+
+    <div id="reading-question-area">
+      <p class="reading-question-count" id="reading-question-count"></p>
+      <p class="reading-question-text" id="reading-question-text"></p>
+      <div id="reading-options" class="reading-options"></div>
+      <button id="reading-next-btn" class="btn btn-primary" hidden>Suivant</button>
+    </div>
+
+    <div id="reading-result-area" hidden></div>
+  </div>
+</main>
+
+<main id="view-writing" class="view">
+  <div id="writing-prompt-list" class="reading-list"></div>
+
+  <div id="writing-prompt-view" class="reading-passage-view" hidden>
+    <button id="writing-back-btn" class="reading-back-btn">← Retour aux sujets</button>
+    <h2 id="writing-prompt-title"></h2>
+    <p id="writing-prompt-instructions" class="reading-passage-text"></p>
+    <p class="writing-target" id="writing-prompt-target"></p>
+
+    <p class="writing-connectors-label">Connecteurs suggérés :</p>
+    <div id="writing-connectors" class="writing-connectors"></div>
+
+    <textarea id="writing-textarea" class="writing-textarea" placeholder="Écris ta réponse ici..." rows="10"></textarea>
+    <p id="writing-word-count" class="word-count">0 mots</p>
+
+    <p class="writing-checklist-label">Grille d'auto-correction :</p>
+    <div id="writing-checklist" class="checklist"></div>
+  </div>
+</main>
+
+<main id="view-listening" class="view">
+  <div id="listening-item-list" class="reading-list"></div>
+
+  <div id="listening-item-view" class="reading-passage-view" hidden>
+    <button id="listening-back-btn" class="reading-back-btn">← Retour aux écoutes</button>
+    <h2 id="listening-item-title"></h2>
+
+    <p id="listening-unsupported" class="listening-unsupported" hidden>
+      La synthèse vocale n'est pas disponible sur cet appareil. Lis la transcription ci-dessous.
+    </p>
+
+    <div class="listening-controls">
+      <button id="listening-play-btn" class="btn btn-primary">🔊 Écouter</button>
+      <button id="listening-slow-btn" class="btn btn-primary">🐢 Plus lent</button>
+      <button id="listening-toggle-transcript-btn" class="reading-back-btn">Afficher la transcription</button>
+    </div>
+    <p id="listening-transcript" class="reading-passage-text" hidden></p>
+
+    <div id="listening-question-area">
+      <p class="reading-question-count" id="listening-question-count"></p>
+      <p class="reading-question-text" id="listening-question-text"></p>
+      <div id="listening-options" class="reading-options"></div>
+      <button id="listening-next-btn" class="btn btn-primary" hidden>Suivant</button>
+    </div>
+
+    <div id="listening-result-area" hidden></div>
+  </div>
+</main>
+
+<main id="view-speaking" class="view">
+  <div id="speaking-prompt-list" class="reading-list"></div>
+
+  <div id="speaking-prompt-view" class="reading-passage-view" hidden>
+    <button id="speaking-back-btn" class="reading-back-btn">← Retour aux sujets</button>
+    <h2 id="speaking-prompt-title"></h2>
+    <p id="speaking-prompt-instructions" class="reading-passage-text"></p>
+
+    <p class="writing-connectors-label">Vocabulaire suggéré :</p>
+    <div id="speaking-vocab" class="writing-connectors"></div>
+
+    <p id="speaking-recording-notice" class="listening-unsupported" hidden>
+      L'enregistrement audio n'est pas disponible sur cet appareil. Entraîne-toi à voix haute quand même en suivant le minuteur.
+    </p>
+
+    <div class="speaking-timer-box">
+      <p class="speaking-phase-label" id="speaking-phase-label"></p>
+      <p class="speaking-timer" id="speaking-timer"></p>
+      <button id="speaking-start-btn" class="btn btn-primary">Commencer</button>
+      <button id="speaking-restart-btn" class="reading-back-btn">Recommencer</button>
+    </div>
+
+    <audio id="speaking-playback" class="speaking-playback" controls hidden></audio>
+
+    <p class="writing-checklist-label">Auto-évaluation :</p>
+    <div id="speaking-checklist" class="checklist"></div>
+  </div>
+</main>
+
 <main id="view-stats" class="view">
   <h2>Statistiques</h2>
   <div id="stats-summary" class="stats-summary"></div>
@@ -58,8 +182,13 @@
 </main>
 
 <nav class="tabbar">
-  <button class="tab-btn active" data-view="view-review">📇 Réviser</button>
-  <button class="tab-btn" data-view="view-stats">📊 Stats</button>
+  <button class="tab-btn active" data-view="view-review"><span class="tab-icon">📇</span><span class="tab-label">Vocab</span></button>
+  <button class="tab-btn" data-view="view-conjugation"><span class="tab-icon">🔤</span><span class="tab-label">Verbes</span></button>
+  <button class="tab-btn" data-view="view-reading"><span class="tab-icon">📖</span><span class="tab-label">Lecture</span></button>
+  <button class="tab-btn" data-view="view-writing"><span class="tab-icon">✍️</span><span class="tab-label">Écriture</span></button>
+  <button class="tab-btn" data-view="view-listening"><span class="tab-icon">🎧</span><span class="tab-label">Écoute</span></button>
+  <button class="tab-btn" data-view="view-speaking"><span class="tab-icon">🗣️</span><span class="tab-label">Parole</span></button>
+  <button class="tab-btn" data-view="view-stats"><span class="tab-icon">📊</span><span class="tab-label">Stats</span></button>
 </nav>
 
 <script type="module" src="js/app.js"></script>

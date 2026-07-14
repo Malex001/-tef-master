@@ -1,0 +1,85 @@
+{
+  "types": [
+    { "id": "email", "fr": "Courriel" },
+    { "id": "annonce", "fr": "Annonce" },
+    { "id": "article", "fr": "Article" },
+    { "id": "opinion", "fr": "Article d'opinion" },
+    { "id": "lettre", "fr": "Lettre formelle" },
+    { "id": "avis", "fr": "Avis public" }
+  ],
+  "passages": [
+    {
+      "id": "r1",
+      "type": "email",
+      "difficulty": "A2",
+      "title": "Invitation à une fête",
+      "text": "Objet : Anniversaire de Sophie\n\nSalut Marc,\n\nJ'organise une fête pour l'anniversaire de Sophie samedi prochain, le 14 juin, chez moi à partir de 19h. Ce sera une soirée simple : quelques amis, de la musique et un gâteau. Peux-tu apporter des boissons ? Sophie ne sait rien, alors garde le secret !\n\nRéponds-moi vite pour me dire si tu peux venir.\n\nÀ bientôt,\nJulie",
+      "questions": [
+        {"q": "Pourquoi Julie organise-t-elle cette fête ?", "options": ["Pour son propre anniversaire", "Pour l'anniversaire de Sophie", "Pour célébrer une promotion", "Pour dire au revoir à un ami"], "correct": 1},
+        {"q": "Que demande Julie à Marc ?", "options": ["D'apporter un cadeau", "D'apporter des boissons", "D'apporter de la musique", "D'arriver plus tôt"], "correct": 1},
+        {"q": "Pourquoi Marc doit-il garder le secret ?", "options": ["Parce que c'est une surprise pour Sophie", "Parce que Julie ne veut pas trop de monde", "Parce que Sophie n'aime pas les fêtes", "Parce que c'est un secret professionnel"], "correct": 0}
+      ]
+    },
+    {
+      "id": "r2",
+      "type": "annonce",
+      "difficulty": "A2",
+      "title": "Appartement à louer",
+      "text": "À LOUER – Appartement 3 pièces\n\nQuartier calme, proche des transports en commun. 65 m², deuxième étage sans ascenseur. Cuisine équipée, salle de bain rénovée, balcon. Loyer : 950 $ par mois, charges comprises. Disponible à partir du 1er août. Non-fumeur, animaux acceptés. Contactez le propriétaire au 514-555-2398 après 17h.",
+      "questions": [
+        {"q": "À quel étage se trouve l'appartement ?", "options": ["Au rez-de-chaussée", "Au premier étage", "Au deuxième étage", "Au troisième étage"], "correct": 2},
+        {"q": "Que comprend le loyer de 950 $ ?", "options": ["Seulement le loyer de base", "Le loyer et les charges", "Le loyer et le stationnement", "Le loyer et les meubles"], "correct": 1},
+        {"q": "À quel moment faut-il appeler le propriétaire ?", "options": ["Avant 9h", "Pendant la journée", "Après 17h", "Le week-end seulement"], "correct": 2},
+        {"q": "Les animaux sont-ils autorisés ?", "options": ["Oui", "Non", "Seulement les petits chiens", "L'annonce ne le précise pas"], "correct": 0}
+      ]
+    },
+    {
+      "id": "r3",
+      "type": "article",
+      "difficulty": "B1",
+      "title": "Une nouvelle piste cyclable",
+      "text": "Une nouvelle piste cyclable a été inaugurée la semaine dernière dans le centre-ville. Longue de cinq kilomètres, elle relie le quartier résidentiel au centre commercial et à la gare. Selon la mairie, ce projet vise à réduire la circulation automobile et à encourager les déplacements écologiques. Plusieurs habitants se sont réjouis de cette initiative, même si certains commerçants craignent une diminution des places de stationnement devant leurs magasins.",
+      "questions": [
+        {"q": "Quelle est la longueur de la nouvelle piste cyclable ?", "options": ["Trois kilomètres", "Cinq kilomètres", "Dix kilomètres", "Vingt kilomètres"], "correct": 1},
+        {"q": "Quel est l'objectif principal de ce projet selon la mairie ?", "options": ["Créer des emplois", "Réduire la circulation automobile", "Attirer plus de touristes", "Réduire les impôts locaux"], "correct": 1},
+        {"q": "Pourquoi certains commerçants sont-ils inquiets ?", "options": ["Ils craignent une baisse des places de stationnement", "Ils craignent une hausse des prix", "Ils n'aiment pas le vélo", "Ils pensent que la piste est trop courte"], "correct": 0}
+      ]
+    },
+    {
+      "id": "r4",
+      "type": "opinion",
+      "difficulty": "B2",
+      "title": "Le télétravail en question",
+      "text": "De plus en plus d'entreprises adoptent le télétravail, et cette tendance suscite un débat intéressant. D'un côté, les employés apprécient la flexibilité et le temps gagné sur les trajets. De l'autre, certains employeurs s'inquiètent d'une baisse de la collaboration entre collègues. À mon avis, le télétravail devrait rester optionnel : chacun doit pouvoir choisir la formule qui lui convient le mieux, selon son poste et sa situation personnelle.",
+      "questions": [
+        {"q": "Quel avantage du télétravail est mentionné dans le texte ?", "options": ["Un salaire plus élevé", "Le temps gagné sur les trajets", "Moins de réunions", "Plus de vacances"], "correct": 1},
+        {"q": "Quelle est la principale inquiétude des employeurs ?", "options": ["La baisse de la productivité", "La baisse de la collaboration entre collègues", "L'augmentation des coûts", "La sécurité informatique"], "correct": 1},
+        {"q": "Quelle est l'opinion de l'auteur ?", "options": ["Le télétravail devrait être obligatoire", "Le télétravail devrait être interdit", "Le télétravail devrait rester optionnel", "L'auteur n'exprime pas d'opinion"], "correct": 2}
+      ]
+    },
+    {
+      "id": "r5",
+      "type": "lettre",
+      "difficulty": "B1",
+      "title": "Suivi de candidature",
+      "text": "Objet : Suivi de candidature – Poste d'assistant administratif\n\nMadame, Monsieur,\n\nJ'ai soumis ma candidature pour le poste d'assistant administratif le 3 mars dernier. N'ayant pas reçu de réponse à ce jour, je me permets de vous contacter afin de connaître l'état d'avancement de ma demande. Je reste disponible pour un entretien à votre convenance et je vous remercie par avance pour l'attention que vous porterez à mon message.\n\nCordialement,\nAmadou Diallo",
+      "questions": [
+        {"q": "Pourquoi Amadou Diallo écrit-il ce courriel ?", "options": ["Pour poser sa candidature", "Pour suivre l'état de sa candidature", "Pour annuler sa candidature", "Pour demander une augmentation"], "correct": 1},
+        {"q": "Quand a-t-il soumis sa candidature ?", "options": ["Le 3 janvier", "Le 3 février", "Le 3 mars", "Le 3 avril"], "correct": 2},
+        {"q": "Que propose-t-il à la fin du courriel ?", "options": ["De retirer sa candidature", "D'être disponible pour un entretien", "De soumettre un nouveau CV", "De rencontrer un autre candidat"], "correct": 1}
+      ]
+    },
+    {
+      "id": "r6",
+      "type": "avis",
+      "difficulty": "B1",
+      "title": "Travaux de réfection",
+      "text": "Avis aux résidents : des travaux de réfection de la chaussée auront lieu du 10 au 20 juillet sur la rue Principale, entre l'avenue des Érables et le boulevard du Parc. La circulation sera réduite à une seule voie pendant cette période. Les résidents sont invités à privilégier les rues avoisinantes pour leurs déplacements. Le service de collecte des déchets ne sera pas affecté.",
+      "questions": [
+        {"q": "Combien de temps dureront les travaux ?", "options": ["Une semaine", "Dix jours", "Un mois", "Deux jours"], "correct": 1},
+        {"q": "Quel impact les travaux auront-ils sur la circulation ?", "options": ["La rue sera complètement fermée", "La circulation sera réduite à une voie", "Il n'y aura aucun impact", "La rue sera à sens unique"], "correct": 1},
+        {"q": "Le service de collecte des déchets sera-t-il affecté ?", "options": ["Oui, il sera suspendu", "Non", "Oui, mais partiellement", "Le texte ne le précise pas"], "correct": 1}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "pronouns": ["je", "tu", "il/elle/on", "nous", "vous", "ils/elles"],
+  "tenses": [
+    { "id": "present", "fr": "Présent" },
+    { "id": "imparfait", "fr": "Imparfait" },
+    { "id": "futur", "fr": "Futur simple" },
+    { "id": "conditionnel", "fr": "Conditionnel présent" },
+    { "id": "subjonctif", "fr": "Subjonctif présent" },
+    { "id": "passe_compose", "fr": "Passé composé" }
+  ],
+  "verbs": [
+    {"infinitive":"parler","en":"to speak","aux":"avoir","participe":"parlé","forms":{
+      "present":["parle","parles","parle","parlons","parlez","parlent"],
+      "imparfait":["parlais","parlais","parlait","parlions","parliez","parlaient"],
+      "futur":["parlerai","parleras","parlera","parlerons","parlerez","parleront"],
+      "conditionnel":["parlerais","parlerais","parlerait","parlerions","parleriez","parleraient"],
+      "subjonctif":["parle","parles","parle","parlions","parliez","parlent"]
+    }},
+    {"infinitive":"manger","en":"to eat","aux":"avoir","participe":"mangé","forms":{
+      "present":["mange","manges","mange","mangeons","mangez","mangent"],
+      "imparfait":["mangeais","mangeais","mangeait","mangions","mangiez","mangeaient"],
+      "futur":["mangerai","mangeras","mangera","mangerons","mangerez","mangeront"],
+      "conditionnel":["mangerais","mangerais","mangerait","mangerions","mangeriez","mangeraient"],
+      "subjonctif":["mange","manges","mange","mangions","mangiez","mangent"]
+    }},
+    {"infinitive":"habiter","en":"to live","aux":"avoir","participe":"habité","forms":{
+      "present":["habite","habites","habite","habitons","habitez","habitent"],
+      "imparfait":["habitais","habitais","habitait","habitions","habitiez","habitaient"],
+      "futur":["habiterai","habiteras","habitera","habiterons","habiterez","habiteront"],
+      "conditionnel":["habiterais","habiterais","habiterait","habiterions","habiteriez","habiteraient"],
+      "subjonctif":["habite","habites","habite","habitions","habitiez","habitent"]
+    }},
+    {"infinitive":"chercher","en":"to look for","aux":"avoir","participe":"cherché","forms":{
+      "present":["cherche","cherches","cherche","cherchons","cherchez","cherchent"],
+      "imparfait":["cherchais","cherchais","cherchait","cherchions","cherchiez","cherchaient"],
+      "futur":["chercherai","chercheras","cherchera","chercherons","chercherez","chercheront"],
+      "conditionnel":["chercherais","chercherais","chercherait","chercherions","chercheriez","chercheraient"],
+      "subjonctif":["cherche","cherches","cherche","cherchions","cherchiez","cherchent"]
+    }},
+    {"infinitive":"arriver","en":"to arrive","aux":"etre","participe":"arrivé","forms":{
+      "present":["arrive","arrives","arrive","arrivons","arrivez","arrivent"],
+      "imparfait":["arrivais","arrivais","arrivait","arrivions","arriviez","arrivaient"],
+      "futur":["arriverai","arriveras","arrivera","arriverons","arriverez","arriveront"],
+      "conditionnel":["arriverais","arriverais","arriverait","arriverions","arriveriez","arriveraient"],
+      "subjonctif":["arrive","arrives","arrive","arrivions","arriviez","arrivent"]
+    }},
+    {"infinitive":"finir","en":"to finish","aux":"avoir","participe":"fini","forms":{
+      "present":["finis","finis","finit","finissons","finissez","finissent"],
+      "imparfait":["finissais","finissais","finissait","finissions","finissiez","finissaient"],
+      "futur":["finirai","finiras","finira","finirons","finirez","finiront"],
+      "conditionnel":["finirais","finirais","finirait","finirions","finiriez","finiraient"],
+      "subjonctif":["finisse","finisses","finisse","finissions","finissiez","finissent"]
+    }},
+    {"infinitive":"choisir","en":"to choose","aux":"avoir","participe":"choisi","forms":{
+      "present":["choisis","choisis","choisit","choisissons","choisissez","choisissent"],
+      "imparfait":["choisissais","choisissais","choisissait","choisissions","choisissiez","choisissaient"],
+      "futur":["choisirai","choisiras","choisira","choisirons","choisirez","choisiront"],
+      "conditionnel":["choisirais","choisirais","choisirait","choisirions","choisiriez","choisiraient"],
+      "subjonctif":["choisisse","choisisses","choisisse","choisissions","choisissiez","choisissent"]
+    }},
+    {"infinitive":"attendre","en":"to wait","aux":"avoir","participe":"attendu","forms":{
+      "present":["attends","attends","attend","attendons","attendez","attendent"],
+      "imparfait":["attendais","attendais","attendait","attendions","attendiez","attendaient"],
+      "futur":["attendrai","attendras","attendra","attendrons","attendrez","attendront"],
+      "conditionnel":["attendrais","attendrais","attendrait","attendrions","attendriez","attendraient"],
+      "subjonctif":["attende","attendes","attende","attendions","attendiez","attendent"]
+    }},
+    {"infinitive":"vendre","en":"to sell","aux":"avoir","participe":"vendu","forms":{
+      "present":["vends","vends","vend","vendons","vendez","vendent"],
+      "imparfait":["vendais","vendais","vendait","vendions","vendiez","vendaient"],
+      "futur":["vendrai","vendras","vendra","vendrons","vendrez","vendront"],
+      "conditionnel":["vendrais","vendrais","vendrait","vendrions","vendriez","vendraient"],
+      "subjonctif":["vende","vendes","vende","vendions","vendiez","vendent"]
+    }},
+    {"infinitive":"être","en":"to be","aux":"avoir","participe":"été","forms":{
+      "present":["suis","es","est","sommes","êtes","sont"],
+      "imparfait":["étais","étais","était","étions","étiez","étaient"],
+      "futur":["serai","seras","sera","serons","serez","seront"],
+      "conditionnel":["serais","serais","serait","serions","seriez","seraient"],
+      "subjonctif":["sois","sois","soit","soyons","soyez","soient"]
+    }},
+    {"infinitive":"avoir","en":"to have","aux":"avoir","participe":"eu","forms":{
+      "present":["ai","as","a","avons","avez","ont"],
+      "imparfait":["avais","avais","avait","avions","aviez","avaient"],
+      "futur":["aurai","auras","aura","aurons","aurez","auront"],
+      "conditionnel":["aurais","aurais","aurait","aurions","auriez","auraient"],
+      "subjonctif":["aie","aies","ait","ayons","ayez","aient"]
+    }},
+    {"infinitive":"aller","en":"to go","aux":"etre","participe":"allé","forms":{
+      "present":["vais","vas","va","allons","allez","vont"],
+      "imparfait":["allais","allais","allait","allions","alliez","allaient"],
+      "futur":["irai","iras","ira","irons","irez","iront"],
+      "conditionnel":["irais","irais","irait","irions","iriez","iraient"],
+      "subjonctif":["aille","ailles","aille","allions","alliez","aillent"]
+    }},
+    {"infinitive":"faire","en":"to do/make","aux":"avoir","participe":"fait","forms":{
+      "present":["fais","fais","fait","faisons","faites","font"],
+      "imparfait":["faisais","faisais","faisait","faisions","faisiez","faisaient"],
+      "futur":["ferai","feras","fera","ferons","ferez","feront"],
+      "conditionnel":["ferais","ferais","ferait","ferions","feriez","feraient"],
+      "subjonctif":["fasse","fasses","fasse","fassions","fassiez","fassent"]
+    }},
+    {"infinitive":"pouvoir","en":"to be able to","aux":"avoir","participe":"pu","forms":{
+      "present":["peux","peux","peut","pouvons","pouvez","peuvent"],
+      "imparfait":["pouvais","pouvais","pouvait","pouvions","pouviez","pouvaient"],
+      "futur":["pourrai","pourras","pourra","pourrons","pourrez","pourront"],
+      "conditionnel":["pourrais","pourrais","pourrait","pourrions","pourriez","pourraient"],
+      "subjonctif":["puisse","puisses","puisse","puissions","puissiez","puissent"]
+    }},
+    {"infinitive":"vouloir","en":"to want","aux":"avoir","participe":"voulu","forms":{
+      "present":["veux","veux","veut","voulons","voulez","veulent"],
+      "imparfait":["voulais","voulais","voulait","voulions","vouliez","voulaient"],
+      "futur":["voudrai","voudras","voudra","voudrons","voudrez","voudront"],
+      "conditionnel":["voudrais","voudrais","voudrait","voudrions","voudriez","voudraient"],
+      "subjonctif":["veuille","veuilles","veuille","voulions","vouliez","veuillent"]
+    }},
+    {"infinitive":"devoir","en":"must/to owe","aux":"avoir","participe":"dû","forms":{
+      "present":["dois","dois","doit","devons","devez","doivent"],
+      "imparfait":["devais","devais","devait","devions","deviez","devaient"],
+      "futur":["devrai","devras","devra","devrons","devrez","devront"],
+      "conditionnel":["devrais","devrais","devrait","devrions","devriez","devraient"],
+      "subjonctif":["doive","doives","doive","devions","deviez","doivent"]
+    }},
+    {"infinitive":"savoir","en":"to know (facts)","aux":"avoir","participe":"su","forms":{
+      "present":["sais","sais","sait","savons","savez","savent"],
+      "imparfait":["savais","savais","savait","savions","saviez","savaient"],
+      "futur":["saurai","sauras","saura","saurons","saurez","sauront"],
+      "conditionnel":["saurais","saurais","saurait","saurions","sauriez","sauraient"],
+      "subjonctif":["sache","saches","sache","sachions","sachiez","sachent"]
+    }},
+    {"infinitive":"venir","en":"to come","aux":"etre","participe":"venu","forms":{
+      "present":["viens","viens","vient","venons","venez","viennent"],
+      "imparfait":["venais","venais","venait","venions","veniez","venaient"],
+      "futur":["viendrai","viendras","viendra","viendrons","viendrez","viendront"],
+      "conditionnel":["viendrais","viendrais","viendrait","viendrions","viendriez","viendraient"],
+      "subjonctif":["vienne","viennes","vienne","venions","veniez","viennent"]
+    }},
+    {"infinitive":"prendre","en":"to take","aux":"avoir","participe":"pris","forms":{
+      "present":["prends","prends","prend","prenons","prenez","prennent"],
+      "imparfait":["prenais","prenais","prenait","prenions","preniez","prenaient"],
+      "futur":["prendrai","prendras","prendra","prendrons","prendrez","prendront"],
+      "conditionnel":["prendrais","prendrais","prendrait","prendrions","prendriez","prendraient"],
+      "subjonctif":["prenne","prennes","prenne","prenions","preniez","prennent"]
+    }},
+    {"infinitive":"voir","en":"to see","aux":"avoir","participe":"vu","forms":{
+      "present":["vois","vois","voit","voyons","voyez","voient"],
+      "imparfait":["voyais","voyais","voyait","voyions","voyiez","voyaient"],
+      "futur":["verrai","verras","verra","verrons","verrez","verront"],
+      "conditionnel":["verrais","verrais","verrait","verrions","verriez","verraient"],
+      "subjonctif":["voie","voies","voie","voyions","voyiez","voient"]
+    }},
+    {"infinitive":"dire","en":"to say","aux":"avoir","participe":"dit","forms":{
+      "present":["dis","dis","dit","disons","dites","disent"],
+      "imparfait":["disais","disais","disait","disions","disiez","disaient"],
+      "futur":["dirai","diras","dira","dirons","direz","diront"],
+      "conditionnel":["dirais","dirais","dirait","dirions","diriez","diraient"],
+      "subjonctif":["dise","dises","dise","disions","disiez","disent"]
+    }},
+    {"infinitive":"mettre","en":"to put","aux":"avoir","participe":"mis","forms":{
+      "present":["mets","mets","met","mettons","mettez","mettent"],
+      "imparfait":["mettais","mettais","mettait","mettions","mettiez","mettaient"],
+      "futur":["mettrai","mettras","mettra","mettrons","mettrez","mettront"],
+      "conditionnel":["mettrais","mettrais","mettrait","mettrions","mettriez","mettraient"],
+      "subjonctif":["mette","mettes","mette","mettions","mettiez","mettent"]
+    }},
+    {"infinitive":"sortir","en":"to go out","aux":"etre","participe":"sorti","forms":{
+      "present":["sors","sors","sort","sortons","sortez","sortent"],
+      "imparfait":["sortais","sortais","sortait","sortions","sortiez","sortaient"],
+      "futur":["sortirai","sortiras","sortira","sortirons","sortirez","sortiront"],
+      "conditionnel":["sortirais","sortirais","sortirait","sortirions","sortiriez","sortiraient"],
+      "subjonctif":["sorte","sortes","sorte","sortions","sortiez","sortent"]
+    }},
+    {"infinitive":"partir","en":"to leave","aux":"etre","participe":"parti","forms":{
+      "present":["pars","pars","part","partons","partez","partent"],
+      "imparfait":["partais","partais","partait","partions","partiez","partaient"],
+      "futur":["partirai","partiras","partira","partirons","partirez","partiront"],
+      "conditionnel":["partirais","partirais","partirait","partirions","partiriez","partiraient"],
+      "subjonctif":["parte","partes","parte","partions","partiez","partent"]
+    }},
+    {"infinitive":"connaître","en":"to know (people/places)","aux":"avoir","participe":"connu","forms":{
+      "present":["connais","connais","connaît","connaissons","connaissez","connaissent"],
+      "imparfait":["connaissais","connaissais","connaissait","connaissions","connaissiez","connaissaient"],
+      "futur":["connaîtrai","connaîtras","connaîtra","connaîtrons","connaîtrez","connaîtront"],
+      "conditionnel":["connaîtrais","connaîtrais","connaîtrait","connaîtrions","connaîtriez","connaîtraient"],
+      "subjonctif":["connaisse","connaisses","connaisse","connaissions","connaissiez","connaissent"]
+    }},
+    {"infinitive":"boire","en":"to drink","aux":"avoir","participe":"bu","forms":{
+      "present":["bois","bois","boit","buvons","buvez","boivent"],
+      "imparfait":["buvais","buvais","buvait","buvions","buviez","buvaient"],
+      "futur":["boirai","boiras","boira","boirons","boirez","boiront"],
+      "conditionnel":["boirais","boirais","boirait","boirions","boiriez","boiraient"],
+      "subjonctif":["boive","boives","boive","buvions","buviez","boivent"]
+    }},
+    {"infinitive":"écrire","en":"to write","aux":"avoir","participe":"écrit","forms":{
+      "present":["écris","écris","écrit","écrivons","écrivez","écrivent"],
+      "imparfait":["écrivais","écrivais","écrivait","écrivions","écriviez","écrivaient"],
+      "futur":["écrirai","écriras","écrira","écrirons","écrirez","écriront"],
+      "conditionnel":["écrirais","écrirais","écrirait","écririons","écririez","écriraient"],
+      "subjonctif":["écrive","écrives","écrive","écrivions","écriviez","écrivent"]
+    }},
+    {"infinitive":"lire","en":"to read","aux":"avoir","participe":"lu","forms":{
+      "present":["lis","lis","lit","lisons","lisez","lisent"],
+      "imparfait":["lisais","lisais","lisait","lisions","lisiez","lisaient"],
+      "futur":["lirai","liras","lira","lirons","lirez","liront"],
+      "conditionnel":["lirais","lirais","lirait","lirions","liriez","liraient"],
+      "subjonctif":["lise","lises","lise","lisions","lisiez","lisent"]
+    }},
+    {"infinitive":"vivre","en":"to live","aux":"avoir","participe":"vécu","forms":{
+      "present":["vis","vis","vit","vivons","vivez","vivent"],
+      "imparfait":["vivais","vivais","vivait","vivions","viviez","vivaient"],
+      "futur":["vivrai","vivras","vivra","vivrons","vivrez","vivront"],
+      "conditionnel":["vivrais","vivrais","vivrait","vivrions","vivriez","vivraient"],
+      "subjonctif":["vive","vives","vive","vivions","viviez","vivent"]
+    }},
+    {"infinitive":"recevoir","en":"to receive","aux":"avoir","participe":"reçu","forms":{
+      "present":["reçois","reçois","reçoit","recevons","recevez","reçoivent"],
+      "imparfait":["recevais","recevais","recevait","recevions","receviez","recevaient"],
+      "futur":["recevrai","recevras","recevra","recevrons","recevrez","recevront"],
+      "conditionnel":["recevrais","recevrais","recevrait","recevrions","recevriez","recevraient"],
+      "subjonctif":["reçoive","reçoives","reçoive","recevions","receviez","reçoivent"]
+    }}
+  ]
+}

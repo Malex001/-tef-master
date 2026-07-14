@@ -1,0 +1,71 @@
+{
+  "categories": [
+    { "id": "description", "fr": "Description" },
+    { "id": "jeu_de_role", "fr": "Jeu de rôle" },
+    { "id": "debat", "fr": "Débat d'opinion" }
+  ],
+  "checklist": [
+    "J'ai parlé pendant la durée demandée",
+    "J'ai structuré ma réponse (introduction, développement, conclusion)",
+    "J'ai utilisé du vocabulaire varié",
+    "J'ai fait attention à la conjugaison des verbes",
+    "J'ai parlé avec fluidité, sans trop de pauses",
+    "Ma prononciation était claire"
+  ],
+  "prompts": [
+    {
+      "id": "s1",
+      "category": "description",
+      "title": "Le marché du samedi",
+      "instructions": "Décris la scène suivante : un marché en plein air, le samedi matin. Des vendeurs proposent des fruits, des légumes et des fleurs. Beaucoup de gens font leurs courses avec des paniers. Décris ce que tu vois, ce que font les gens, et donne ton impression générale de cette scène.",
+      "prepSeconds": 30,
+      "speakSeconds": 60,
+      "vocab": ["au premier plan", "à l'arrière-plan", "on peut voir", "il semble que", "l'ambiance"]
+    },
+    {
+      "id": "s2",
+      "category": "description",
+      "title": "Ton quartier",
+      "instructions": "Décris ta ville ou ton quartier. Parle de son atmosphère, des lieux importants, et de ce que tu aimes ou n'aimes pas.",
+      "prepSeconds": 30,
+      "speakSeconds": 90,
+      "vocab": ["situé(e) à", "ce qui me plaît c'est", "en revanche", "les alentours"]
+    },
+    {
+      "id": "s3",
+      "category": "jeu_de_role",
+      "title": "Problème au restaurant",
+      "instructions": "Tu es au restaurant et ton plat n'est pas ce que tu as commandé. Explique poliment le problème au serveur et demande une solution.",
+      "prepSeconds": 20,
+      "speakSeconds": 60,
+      "vocab": ["excusez-moi", "ce n'est pas ce que j'ai commandé", "pourriez-vous", "je préférerais"]
+    },
+    {
+      "id": "s4",
+      "category": "jeu_de_role",
+      "title": "Réservation de billet d'avion",
+      "instructions": "Tu appelles une agence de voyage pour réserver un billet d'avion. Donne tes dates, ta destination et pose des questions sur le prix.",
+      "prepSeconds": 20,
+      "speakSeconds": 60,
+      "vocab": ["je voudrais réserver", "un aller simple", "un aller-retour", "combien coûte", "est-ce qu'il reste des places"]
+    },
+    {
+      "id": "s5",
+      "category": "debat",
+      "title": "Grandes villes vs petites villes",
+      "instructions": "Certaines personnes pensent que les grandes villes offrent plus d'opportunités que les petites villes. Es-tu d'accord ? Donne ton opinion avec des arguments et des exemples.",
+      "prepSeconds": 45,
+      "speakSeconds": 120,
+      "vocab": ["à mon avis", "d'une part", "d'autre part", "par exemple", "en conclusion"]
+    },
+    {
+      "id": "s6",
+      "category": "debat",
+      "title": "Transports en commun ou routes ?",
+      "instructions": "Le gouvernement devrait-il investir davantage dans les transports en commun plutôt que dans les routes ? Donne ton avis avec des arguments.",
+      "prepSeconds": 45,
+      "speakSeconds": 120,
+      "vocab": ["il me semble que", "cela permettrait de", "toutefois", "en somme"]
+    }
+  ]
+}

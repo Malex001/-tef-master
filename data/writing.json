@@ -1,0 +1,67 @@
+{
+  "checklist": [
+    "J'ai respecté le nombre de mots demandé",
+    "J'ai répondu directement à la consigne",
+    "Mon texte a une introduction et une conclusion claires",
+    "J'ai utilisé des connecteurs logiques (d'abord, ensuite, cependant, par conséquent...)",
+    "J'ai vérifié les accords sujet-verbe et adjectif-nom",
+    "J'ai vérifié la conjugaison des verbes",
+    "J'ai relu pour les fautes d'orthographe et les accents"
+  ],
+  "prompts": [
+    {
+      "id": "w1",
+      "section": "A",
+      "title": "Message d'invitation",
+      "instructions": "Vous emménagez dans un nouvel appartement. Écrivez un message à un(e) ami(e) pour l'inviter à une crémaillère. Précisez la date, l'heure et l'adresse.",
+      "minWords": 60,
+      "maxWords": 120,
+      "connectors": ["tout d'abord", "par ailleurs", "n'hésite pas à", "à bientôt"]
+    },
+    {
+      "id": "w2",
+      "section": "A",
+      "title": "Message de réclamation",
+      "instructions": "Le chauffage de votre appartement ne fonctionne pas depuis trois jours. Écrivez un message à votre propriétaire pour expliquer le problème et demander une réparation rapide.",
+      "minWords": 60,
+      "maxWords": 120,
+      "connectors": ["je vous informe que", "de plus", "je vous prie de", "dans les plus brefs délais"]
+    },
+    {
+      "id": "w3",
+      "section": "A",
+      "title": "Demande d'information",
+      "instructions": "Vous souhaitez vous inscrire à un cours de français pour adultes. Écrivez un message au centre de formation pour demander les horaires, le prix et les documents nécessaires.",
+      "minWords": 60,
+      "maxWords": 120,
+      "connectors": ["je souhaiterais savoir", "par ailleurs", "pourriez-vous me préciser", "dans l'attente de votre réponse"]
+    },
+    {
+      "id": "w4",
+      "section": "B",
+      "title": "Le télétravail est-il bénéfique ?",
+      "instructions": "De plus en plus de personnes travaillent à domicile. Selon vous, le télétravail est-il bénéfique pour la société ? Donnez votre opinion et justifiez-la avec des arguments.",
+      "minWords": 120,
+      "maxWords": 200,
+      "connectors": ["d'une part", "d'autre part", "par conséquent", "en conclusion", "il me semble que"]
+    },
+    {
+      "id": "w5",
+      "section": "B",
+      "title": "L'apprentissage d'une langue seconde à l'école",
+      "instructions": "Certains pensent que l'apprentissage d'une langue seconde devrait être obligatoire dès l'école primaire. Qu'en pensez-vous ? Développez votre point de vue avec des exemples.",
+      "minWords": 120,
+      "maxWords": 200,
+      "connectors": ["tout d'abord", "de plus", "cependant", "en revanche", "pour conclure"]
+    },
+    {
+      "id": "w6",
+      "section": "B",
+      "title": "Les réseaux sociaux : avantages ou inconvénients ?",
+      "instructions": "Les réseaux sociaux occupent une place importante dans nos vies. Ont-ils, selon vous, plus d'avantages que d'inconvénients ? Justifiez votre réponse.",
+      "minWords": 120,
+      "maxWords": 200,
+      "connectors": ["en premier lieu", "toutefois", "il ne faut pas oublier que", "en somme"]
+    }
+  ]
+}

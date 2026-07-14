@@ -1,12 +1,16 @@
 import {
   loadProgress,
-  saveProgress,
   loadSettings,
   saveSettings,
   recordAnswer,
   getDueWords,
   getStats,
 } from "./storage.js";
+import { createConjugationApp } from "./conjugation.js";
+import { createReadingApp } from "./reading.js";
+import { createWritingApp } from "./writing.js";
+import { createListeningApp } from "./listening.js";
+import { createSpeakingApp } from "./speaking.js";
 
 let vocab = { themes: [], words: [] };
 let progress = {};
@@ -14,6 +18,11 @@ let settings = {};
 let queue = [];
 let currentIndex = 0;
 let flipped = false;
+let conjugationApp = null;
+let readingApp = null;
+let writingApp = null;
+let listeningApp = null;
+let speakingApp = null;
 
 const el = {
   themeToggle: document.getElementById("theme-toggle"),
@@ -151,6 +160,7 @@ function switchView(viewId) {
     btn.classList.toggle("active", btn.dataset.view === viewId);
   }
   if (viewId === "view-stats") renderStats();
+  if (viewId === "view-conjugation" && conjugationApp) conjugationApp.renderStats();
 }
 
 function wireEvents() {
@@ -186,6 +196,87 @@ async function init() {
   populateThemeFilter();
   wireEvents();
   buildQueue();
+
+  conjugationApp = createConjugationApp({
+    tenseFilter: document.getElementById("tense-filter"),
+    count: document.getElementById("conj-count"),
+    quizArea: document.getElementById("conj-quiz-area"),
+    prompt: document.getElementById("conj-prompt"),
+    tenseLabel: document.getElementById("conj-tense-label"),
+    input: document.getElementById("conj-input"),
+    feedback: document.getElementById("conj-feedback"),
+    checkBtn: document.getElementById("conj-check"),
+    nextBtn: document.getElementById("conj-next"),
+    emptyState: document.getElementById("conj-empty-state"),
+    statsSummary: document.getElementById("conj-stats-summary"),
+    statsThemes: document.getElementById("conj-stats-themes"),
+  });
+  await conjugationApp.init(progress);
+
+  readingApp = createReadingApp({
+    passageList: document.getElementById("reading-passage-list"),
+    passageView: document.getElementById("reading-passage-view"),
+    passageTitle: document.getElementById("reading-passage-title"),
+    passageText: document.getElementById("reading-passage-text"),
+    questionArea: document.getElementById("reading-question-area"),
+    questionCount: document.getElementById("reading-question-count"),
+    questionText: document.getElementById("reading-question-text"),
+    options: document.getElementById("reading-options"),
+    nextBtn: document.getElementById("reading-next-btn"),
+    resultArea: document.getElementById("reading-result-area"),
+    backBtn: document.getElementById("reading-back-btn"),
+  });
+  await readingApp.init(progress);
+
+  writingApp = createWritingApp({
+    promptList: document.getElementById("writing-prompt-list"),
+    promptView: document.getElementById("writing-prompt-view"),
+    promptTitle: document.getElementById("writing-prompt-title"),
+    promptInstructions: document.getElementById("writing-prompt-instructions"),
+    promptTarget: document.getElementById("writing-prompt-target"),
+    connectors: document.getElementById("writing-connectors"),
+    textarea: document.getElementById("writing-textarea"),
+    wordCount: document.getElementById("writing-word-count"),
+    checklistArea: document.getElementById("writing-checklist"),
+    backBtn: document.getElementById("writing-back-btn"),
+  });
+  await writingApp.init();
+
+  listeningApp = createListeningApp({
+    itemList: document.getElementById("listening-item-list"),
+    itemView: document.getElementById("listening-item-view"),
+    itemTitle: document.getElementById("listening-item-title"),
+    unsupportedNotice: document.getElementById("listening-unsupported"),
+    playBtn: document.getElementById("listening-play-btn"),
+    slowBtn: document.getElementById("listening-slow-btn"),
+    toggleTranscriptBtn: document.getElementById("listening-toggle-transcript-btn"),
+    transcript: document.getElementById("listening-transcript"),
+    questionArea: document.getElementById("listening-question-area"),
+    questionCount: document.getElementById("listening-question-count"),
+    questionText: document.getElementById("listening-question-text"),
+    options: document.getElementById("listening-options"),
+    nextBtn: document.getElementById("listening-next-btn"),
+    resultArea: document.getElementById("listening-result-area"),
+    backBtn: document.getElementById("listening-back-btn"),
+  });
+  await listeningApp.init(progress);
+
+  speakingApp = createSpeakingApp({
+    promptList: document.getElementById("speaking-prompt-list"),
+    promptView: document.getElementById("speaking-prompt-view"),
+    promptTitle: document.getElementById("speaking-prompt-title"),
+    promptInstructions: document.getElementById("speaking-prompt-instructions"),
+    vocab: document.getElementById("speaking-vocab"),
+    recordingNotice: document.getElementById("speaking-recording-notice"),
+    phaseLabel: document.getElementById("speaking-phase-label"),
+    timerDisplay: document.getElementById("speaking-timer"),
+    startBtn: document.getElementById("speaking-start-btn"),
+    restartBtn: document.getElementById("speaking-restart-btn"),
+    playback: document.getElementById("speaking-playback"),
+    checklistArea: document.getElementById("speaking-checklist"),
+    backBtn: document.getElementById("speaking-back-btn"),
+  });
+  await speakingApp.init();
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
