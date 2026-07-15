@@ -630,6 +630,49 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.bilan-section-title {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 1.75rem 0 0.5rem;
+}
+
+.bilan-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.bilan-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bilan-row-label {
+  color: var(--text-muted);
+}
+
+.bilan-row-value {
+  font-weight: 600;
+}
+
+.bilan-copy-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.bilan-copy-feedback {
+  text-align: center;
+  color: var(--success);
+  font-size: 0.85rem;
+  min-height: 1.2rem;
+  margin-top: 0.5rem;
+}
+
 .tabbar {
   display: flex;
   border-top: 1px solid var(--border);

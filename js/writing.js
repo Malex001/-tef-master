@@ -116,5 +116,17 @@ export function createWritingApp(el) {
     renderList();
   }
 
-  return { init };
+  function getSummary() {
+    let promptsPracticed = 0;
+    let totalWords = 0;
+    for (const prompt of data.prompts) {
+      const draft = getDraft(prompt.id);
+      const words = countWords(draft.text);
+      totalWords += words;
+      if (words > 0) promptsPracticed += 1;
+    }
+    return { promptsPracticed, promptsTotal: data.prompts.length, totalWords };
+  }
+
+  return { init, getSummary };
 }

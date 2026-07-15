@@ -125,5 +125,18 @@ export function createReadingApp(el) {
       });
   }
 
-  return { init };
+  function getSummary() {
+    let correct = 0;
+    let total = 0;
+    let passagesStarted = 0;
+    for (const passage of data.passages) {
+      const stat = passageCompletion(passage, progress);
+      correct += stat.correct;
+      total += stat.total;
+      if (stat.answered > 0) passagesStarted += 1;
+    }
+    return { correct, total, passagesStarted, passagesTotal: data.passages.length };
+  }
+
+  return { init, getSummary };
 }

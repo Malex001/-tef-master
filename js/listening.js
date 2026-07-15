@@ -153,5 +153,19 @@ export function createListeningApp(el) {
     renderList();
   }
 
-  return { init };
+  function getSummary() {
+    let correct = 0;
+    let total = 0;
+    let itemsStarted = 0;
+    for (const item of data.items) {
+      const stat = itemCompletion(item, progress);
+      correct += stat.correct;
+      total += stat.total;
+      const anyAnswered = item.questions.some((_, i) => progress[`${item.id}-q${i}`]);
+      if (anyAnswered) itemsStarted += 1;
+    }
+    return { correct, total, itemsStarted, itemsTotal: data.items.length };
+  }
+
+  return { init, getSummary };
 }

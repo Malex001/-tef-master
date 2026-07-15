@@ -1,4 +1,4 @@
-const CACHE_NAME = "tef-master-v6";
+const CACHE_NAME = "tef-master-v7";
 const PRECACHE_URLS = [
   "./",
   "./index.html",

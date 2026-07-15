@@ -41,6 +41,9 @@ const el = {
   cardArea: document.getElementById("card-area"),
   statsSummary: document.getElementById("stats-summary"),
   statsThemes: document.getElementById("stats-themes"),
+  bilanSummary: document.getElementById("bilan-summary"),
+  bilanCopyBtn: document.getElementById("bilan-copy-btn"),
+  bilanCopyFeedback: document.getElementById("bilan-copy-feedback"),
   tabButtons: document.querySelectorAll(".tab-btn"),
   views: document.querySelectorAll(".view"),
 };
@@ -152,6 +155,76 @@ function renderStats() {
   }
 }
 
+function collectBilan() {
+  const vocabStats = getStats(vocab.words, progress);
+  const conjStats = conjugationApp ? conjugationApp.getSummary() : { total: 0, learned: 0, mastered: 0 };
+  const readingStats = readingApp
+    ? readingApp.getSummary()
+    : { correct: 0, total: 0, passagesStarted: 0, passagesTotal: 0 };
+  const listeningStats = listeningApp
+    ? listeningApp.getSummary()
+    : { correct: 0, total: 0, itemsStarted: 0, itemsTotal: 0 };
+  const writingStats = writingApp
+    ? writingApp.getSummary()
+    : { promptsPracticed: 0, promptsTotal: 0, totalWords: 0 };
+  const speakingStats = speakingApp
+    ? speakingApp.getSummary()
+    : { promptsPracticed: 0, promptsTotal: 0 };
+  return { vocabStats, conjStats, readingStats, listeningStats, writingStats, speakingStats };
+}
+
+function bilanText(b) {
+  return [
+    `Bilan TEF Master - ${new Date().toLocaleDateString("fr-FR")}`,
+    `Vocabulaire : ${b.vocabStats.learned}/${b.vocabStats.total} vus, ${b.vocabStats.mastered} maitrises`,
+    `Conjugaison : ${b.conjStats.learned}/${b.conjStats.total} vues, ${b.conjStats.mastered} maitrisees`,
+    `Lecture : ${b.readingStats.correct}/${b.readingStats.total} bonnes reponses (${b.readingStats.passagesStarted}/${b.readingStats.passagesTotal} textes commences)`,
+    `Ecoute : ${b.listeningStats.correct}/${b.listeningStats.total} bonnes reponses (${b.listeningStats.itemsStarted}/${b.listeningStats.itemsTotal} ecoutes commencees)`,
+    `Ecriture : ${b.writingStats.promptsPracticed}/${b.writingStats.promptsTotal} sujets pratiques, ${b.writingStats.totalWords} mots ecrits`,
+    `Parole : ${b.speakingStats.promptsPracticed}/${b.speakingStats.promptsTotal} sujets pratiques`,
+  ].join("\n");
+}
+
+function renderBilan() {
+  const b = collectBilan();
+  el.bilanSummary.innerHTML = `
+    <div class="bilan-row"><span class="bilan-row-label">Vocabulaire</span><span class="bilan-row-value">${b.vocabStats.learned}/${b.vocabStats.total} vus, ${b.vocabStats.mastered} maîtrisés</span></div>
+    <div class="bilan-row"><span class="bilan-row-label">Conjugaison</span><span class="bilan-row-value">${b.conjStats.learned}/${b.conjStats.total} vues, ${b.conjStats.mastered} maîtrisées</span></div>
+    <div class="bilan-row"><span class="bilan-row-label">Lecture</span><span class="bilan-row-value">${b.readingStats.correct}/${b.readingStats.total} bonnes réponses</span></div>
+    <div class="bilan-row"><span class="bilan-row-label">Écoute</span><span class="bilan-row-value">${b.listeningStats.correct}/${b.listeningStats.total} bonnes réponses</span></div>
+    <div class="bilan-row"><span class="bilan-row-label">Écriture</span><span class="bilan-row-value">${b.writingStats.promptsPracticed}/${b.writingStats.promptsTotal} sujets</span></div>
+    <div class="bilan-row"><span class="bilan-row-label">Parole</span><span class="bilan-row-value">${b.speakingStats.promptsPracticed}/${b.speakingStats.promptsTotal} sujets</span></div>
+  `;
+}
+
+async function copyBilan() {
+  const text = bilanText(collectBilan());
+  let copied = false;
+  try {
+    await navigator.clipboard.writeText(text);
+    copied = true;
+  } catch {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      copied = document.execCommand("copy");
+    } catch {
+      copied = false;
+    }
+    document.body.removeChild(textarea);
+  }
+  el.bilanCopyFeedback.textContent = copied
+    ? "Copié ! Colle-le dans le chat."
+    : text;
+  setTimeout(() => {
+    el.bilanCopyFeedback.textContent = "";
+  }, copied ? 4000 : 15000);
+}
+
 function switchView(viewId) {
   for (const view of el.views) {
     view.classList.toggle("active", view.id === viewId);
@@ -159,7 +232,10 @@ function switchView(viewId) {
   for (const btn of el.tabButtons) {
     btn.classList.toggle("active", btn.dataset.view === viewId);
   }
-  if (viewId === "view-stats") renderStats();
+  if (viewId === "view-stats") {
+    renderStats();
+    renderBilan();
+  }
   if (viewId === "view-conjugation" && conjugationApp) conjugationApp.renderStats();
 }
 
@@ -179,6 +255,7 @@ function wireEvents() {
   el.flashcard.addEventListener("click", flipCard);
   el.btnKnown.addEventListener("click", () => answer(true));
   el.btnUnknown.addEventListener("click", () => answer(false));
+  el.bilanCopyBtn.addEventListener("click", copyBilan);
 
   for (const btn of el.tabButtons) {
     btn.addEventListener("click", () => switchView(btn.dataset.view));

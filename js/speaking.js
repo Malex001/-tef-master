@@ -192,5 +192,14 @@ export function createSpeakingApp(el) {
     renderList();
   }
 
-  return { init };
+  function getSummary() {
+    let promptsPracticed = 0;
+    for (const prompt of data.prompts) {
+      const state = getState(prompt.id);
+      if (state.checklist.some(Boolean)) promptsPracticed += 1;
+    }
+    return { promptsPracticed, promptsTotal: data.prompts.length };
+  }
+
+  return { init, getSummary };
 }

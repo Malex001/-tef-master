@@ -169,5 +169,9 @@ export function createConjugationApp(el) {
     buildQueue();
   }
 
-  return { init, renderStats };
+  function getSummary() {
+    return getStats(items, progress);
+  }
+
+  return { init, renderStats, getSummary };
 }
